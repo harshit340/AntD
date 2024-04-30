@@ -1,4 +1,4 @@
-import {  Card, Col, Divider, Layout, Menu, Row, Space, Typography } from "antd"
+import {  Card, Col, Divider, Layout, Menu, Row, Space, Table, Typography } from "antd"
 import Sider from "antd/es/layout/Sider"
 import { Content, Header } from "antd/es/layout/layout"
 import "./style/dashboard.css"
@@ -69,7 +69,7 @@ return (
           <Space direction="horizontal">
           <AiOutlineMoneyCollect/>
           <small>Total sales 3</small>
-          </Space>
+          </Space> 
           <Typography.Title>$95675</Typography.Title>
           </Card> 
           </Space>
@@ -85,6 +85,34 @@ return (
             <Card>
               <Typography.Title>something</Typography.Title>
             </Card>
+            </Col>
+           </Row>
+
+           <Row gutter={12} style={{marginTop:25}}>
+            <Col span={10}>
+              {/* we can use faker for generating random data */}
+              <Table /* dataSource={} */ columns={[
+                {
+                  dataIndex:"id",
+                  title:"ID",
+                  key:"id",
+                },
+                {
+                  dataIndex:"name",
+                  title:"Name",
+                  key:"name",
+                },
+                {
+                  dataIndex:"name",
+                  title:"Age",
+                  key:"name",
+                },
+                {
+                  dataIndex:"name",
+                  title:"Address",
+                  key:"name",
+                }
+              ]}/>
             </Col>
            </Row>
           
